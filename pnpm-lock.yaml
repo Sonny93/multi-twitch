@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      '@adonisjs/ally':
+        specifier: ^5.1.1
+        version: 5.1.1(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))
       '@adonisjs/auth':
         specifier: ^9.4.0
         version: 9.5.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))(@adonisjs/lucid@21.8.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))(@vinejs/vine@3.0.1)(luxon@3.7.2)(pg@8.16.3))(@adonisjs/session@7.5.1(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))(edge.js@6.3.0))(@japa/plugin-adonisjs@4.0.0(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))(@japa/runner@4.4.0))
@@ -37,12 +40,18 @@ importers:
       '@inertiajs/react':
         specifier: ^2.2.3
         version: 2.2.3(react@19.1.1)
+      '@rlanz/ally-twitch':
+        specifier: ^0.1.2
+        version: 0.1.2(@adonisjs/ally@5.1.1(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0)))(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))
       '@vinejs/vine':
         specifier: ^3.0.1
         version: 3.0.1
       edge.js:
         specifier: ^6.2.1
         version: 6.3.0
+      knex:
+        specifier: ^3.1.0
+        version: 3.1.0(pg@8.16.3)
       luxon:
         specifier: ^3.7.2
         version: 3.7.2
@@ -124,6 +133,15 @@ packages:
         integrity: sha512-7Wq6CpXmQm3m/6fKfzubAadCdiH2kKSni+K8s5KcTIFryKSqW+f06UAPOUwRJWqy80hnVlujAjveIsNJSPeJjA==,
       }
     engines: { node: '>=18.16.0' }
+
+  '@adonisjs/ally@5.1.1':
+    resolution:
+      {
+        integrity: sha512-Uu+g5y7jnmMP0iXhPYTx9caJnovp+CTqxDN6XpyuLQGVZjNr9fqbPeaBVs1/jTAVSAtpv4UrHsb+827XXd24Jw==,
+      }
+    engines: { node: '>=20.6.0' }
+    peerDependencies:
+      '@adonisjs/core': ^6.2.0
 
   '@adonisjs/application@8.4.2':
     resolution:
@@ -1203,6 +1221,13 @@ packages:
         integrity: sha512-Pf3V9PFyZDIkDBBiAOT2hdmA+1l/+hverHbUnMzNzwtwgO50s2ZPt5KxUydVA0hceg9gryo5unQ0WUF1SO9tkQ==,
       }
 
+  '@poppinss/oauth-client@7.0.1':
+    resolution:
+      {
+        integrity: sha512-TQVDyNqiheSNjooD0Rx3cSbBlUWxZxWgCyC278iaVTnmlunS94qEk6Grw+thm5L1Y2+O+dfsZRtkR117hbEe1g==,
+      }
+    engines: { node: '>=18.16.0' }
+
   '@poppinss/object-builder@1.1.0':
     resolution:
       {
@@ -1246,6 +1271,16 @@ packages:
       {
         integrity: sha512-UhSG1ouT6r67VbEFHK/8ax3EMZYHioew9PqGmEZjV41G15aPZi6cyhXtBVvF9xqkHMflA5V680k7bQzV0kfD5w==,
       }
+
+  '@rlanz/ally-twitch@0.1.2':
+    resolution:
+      {
+        integrity: sha512-8cFm79iXAxfpwBmQ3cBDwr6Tf/LSupcjzIVfEFIm5Pr5OvDP6DAptz5YIqpxMV3Uyqbp5s+mPZJ66Rhx+kiFSA==,
+      }
+    engines: { node: '>=18.16.0' }
+    peerDependencies:
+      '@adonisjs/ally': ^5.0.2
+      '@adonisjs/core': ^6.2.1
 
   '@rolldown/pluginutils@1.0.0-beta.38':
     resolution:
@@ -3513,6 +3548,13 @@ packages:
       tedious:
         optional: true
 
+  ky@1.11.0:
+    resolution:
+      {
+        integrity: sha512-NEyo0ICpS0cqSuyoJFMCnHOZJILqXsKhIZlHJGDYaH8OB5IFrGzuBpEwyoMZG6gUKMPrazH30Ax5XKaujvD8ag==,
+      }
+    engines: { node: '>=18' }
+
   levn@0.4.1:
     resolution:
       {
@@ -5166,6 +5208,12 @@ snapshots:
       youch: 3.3.4
       youch-terminal: 2.2.3
 
+  '@adonisjs/ally@5.1.1(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))':
+    dependencies:
+      '@adonisjs/core': 6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0)
+      '@poppinss/oauth-client': 7.0.1
+      '@poppinss/utils': 6.10.1
+
   '@adonisjs/application@8.4.2(@adonisjs/config@5.0.3)(@adonisjs/fold@10.2.0)':
     dependencies:
       '@adonisjs/config': 5.0.3
@@ -5900,6 +5948,11 @@ snapshots:
       safe-buffer: 5.2.1
       uid-safe: 2.1.5
 
+  '@poppinss/oauth-client@7.0.1':
+    dependencies:
+      '@poppinss/exception': 1.2.2
+      ky: 1.11.0
+
   '@poppinss/object-builder@1.1.0': {}
 
   '@poppinss/prompts@3.1.5':
@@ -5942,6 +5995,12 @@ snapshots:
       secure-json-parse: 4.0.0
 
   '@poppinss/validator-lite@2.1.2': {}
+
+  '@rlanz/ally-twitch@0.1.2(@adonisjs/ally@5.1.1(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0)))(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))':
+    dependencies:
+      '@adonisjs/ally': 5.1.1(@adonisjs/core@6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0))
+      '@adonisjs/core': 6.19.0(@adonisjs/assembler@7.8.2(typescript@5.8.3))(@vinejs/vine@3.0.1)(edge.js@6.3.0)
+      '@poppinss/utils': 6.10.1
 
   '@rolldown/pluginutils@1.0.0-beta.38': {}
 
@@ -7160,6 +7219,8 @@ snapshots:
       pg: 8.16.3
     transitivePeerDependencies:
       - supports-color
+
+  ky@1.11.0: {}
 
   levn@0.4.1:
     dependencies:

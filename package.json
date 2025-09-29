@@ -11,7 +11,8 @@
 		"test": "node ace test",
 		"lint": "eslint .",
 		"format": "prettier --write .",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"postinstall": "pnpm run format"
 	},
 	"imports": {
 		"#controllers/*": "./app/controllers/*.js",
@@ -29,7 +30,8 @@
 		"#database/*": "./database/*.js",
 		"#tests/*": "./tests/*.js",
 		"#start/*": "./start/*.js",
-		"#config/*": "./config/*.js"
+		"#config/*": "./config/*.js",
+		"#types/*": "./app/types/*.js"
 	},
 	"devDependencies": {
 		"@adonisjs/assembler": "^7.8.2",
@@ -53,6 +55,7 @@
 		"vite": "^6.3.5"
 	},
 	"dependencies": {
+		"@adonisjs/ally": "^5.1.1",
 		"@adonisjs/auth": "^9.4.0",
 		"@adonisjs/core": "^6.18.0",
 		"@adonisjs/cors": "^2.2.1",
@@ -63,8 +66,10 @@
 		"@adonisjs/static": "^1.1.1",
 		"@adonisjs/vite": "^4.0.0",
 		"@inertiajs/react": "^2.2.3",
+		"@rlanz/ally-twitch": "^0.1.2",
 		"@vinejs/vine": "^3.0.1",
 		"edge.js": "^6.2.1",
+		"knex": "^3.1.0",
 		"luxon": "^3.7.2",
 		"pg": "^8.16.3",
 		"react": "^19.1.1",
