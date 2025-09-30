@@ -24,8 +24,6 @@ export default class TwitchAuthController {
 		}
 
 		const userProvider = await provider.user();
-		console.log(userProvider);
-
 		const user = await User.updateOrCreate(
 			{
 				providerId: userProvider.id,

@@ -7,7 +7,7 @@ type SelectedStreamsState = {
 	removeStream: (stream: TwitchStream) => void;
 	clearStreams: () => void;
 	toggleStream: (stream: TwitchStream) => void;
-	toggleAllStreams: (streams: TwitchStream[]) => void;
+	addStreams: (streams: TwitchStream[]) => void;
 	isSelected: (stream: TwitchStream) => boolean;
 };
 
@@ -26,6 +26,7 @@ export const useSelectedStreams = create<SelectedStreamsState>((set, get) => ({
 				? state.streams.filter((s) => s.id !== stream.id)
 				: [...state.streams, stream],
 		})),
-	toggleAllStreams: (streams) => set({ streams: [...streams] }),
+	addStreams: (streams) =>
+		set((state) => ({ streams: [...state.streams, ...streams] })),
 	isSelected: (stream) => get().streams.some((s) => s.id === stream.id),
 }));
