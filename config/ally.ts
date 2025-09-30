@@ -7,7 +7,7 @@ const allyConfig = defineConfig({
 		clientId: env.get('TWITCH_CLIENT_ID'),
 		clientSecret: env.get('TWITCH_CLIENT_SECRET'),
 		callbackUrl: `${env.get('APP_URL')}/auth/twitch/callback`,
-		scopes: ['user:read:email'],
+		scopes: ['user:read:email', 'user:read:follows'],
 	}),
 });
 

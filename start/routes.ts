@@ -1,12 +1,13 @@
 import { middleware } from '#start/kernel';
 import router from '@adonisjs/core/services/router';
 
+const HomeController = () => import('#controllers/home_controller');
 const TwitchAuthController = () =>
 	import('#controllers/twitch_auth_controller');
 
 router
 	.group(() => {
-		router.get('/', (ctx) => ctx.inertia.render('home'));
+		router.get('/', [HomeController, 'render']);
 	})
 	.middleware(middleware.auth());
 

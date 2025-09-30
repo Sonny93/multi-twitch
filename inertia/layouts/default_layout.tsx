@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 import 'virtual:uno.css';
-import { Navbar } from '~/components/navbar';
+import { Navbar } from '~/components/common/navbar';
 
-export function BaseLayout({ children }: PropsWithChildren) {
+export function DefaultLayout({ children }: PropsWithChildren) {
 	return (
 		<div className="min-h-screen bg-default bg-gradient-to-br from-light-50 via-light-100 to-light-200 dark:from-dark-950 dark:via-dark-900 dark:to-dark-800">
 			{/* Effet de particules en arrière-plan */}
@@ -15,7 +15,7 @@ export function BaseLayout({ children }: PropsWithChildren) {
 			<Navbar />
 
 			{/* Contenu principal */}
-			<div className="relative z-10">{children}</div>
+			<div className="relative z-10 p-4">{children}</div>
 		</div>
 	);
 }

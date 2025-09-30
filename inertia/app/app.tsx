@@ -5,7 +5,7 @@ import { projectName } from '#config/project';
 import { resolvePageComponent } from '@adonisjs/inertia/helpers';
 import { createInertiaApp } from '@inertiajs/react';
 import { hydrateRoot } from 'react-dom/client';
-import { BaseLayout } from '~/layouts/base_layout';
+import { DefaultLayout } from '~/layouts/default_layout';
 import '../css/app.css';
 
 createInertiaApp({
@@ -20,7 +20,8 @@ createInertiaApp({
 		);
 
 		currentPage.default.layout =
-			currentPage.default.layout || ((p: any) => <BaseLayout children={p} />);
+			currentPage.default.layout ||
+			((p: any) => <DefaultLayout children={p} />);
 
 		return currentPage;
 	},

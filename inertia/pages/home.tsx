@@ -1,15 +1,11 @@
 import { Head } from '@inertiajs/react';
+import { StreamList } from '~/components/streams/stream_list';
 
-export default function Home() {
-	return (
-		<>
-			<Head title="Homepage" />
+const Home = () => (
+	<>
+		<Head title="Homepage" />
+		<StreamList />
+	</>
+);
 
-			<div className="flex items-center justify-center min-h-[calc(100vh-4rem)] px-4">
-				<h1 className="text-6xl md:text-8xl font-bold text-primary">
-					<span className="text-gradient">MultiTwitch</span>
-				</h1>
-			</div>
-		</>
-	);
-}
+export default Home;
