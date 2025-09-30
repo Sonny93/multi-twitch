@@ -13,6 +13,6 @@ export const StreamThumbnail = ({ stream }: { stream: TwitchStream }) => (
 		})}
 		alt={stream.title}
 		referrerPolicy="no-referrer"
-		className="w-full aspect-video object-fit rounded-md"
+		className="w-full aspect-video rounded-md select-none"
 	/>
 );

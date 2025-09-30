@@ -46,6 +46,9 @@ importers:
       '@vinejs/vine':
         specifier: ^3.0.1
         version: 3.0.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       edge.js:
         specifier: ^6.3.0
         version: 6.3.0
@@ -67,6 +70,9 @@ importers:
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
+      zustand:
+        specifier: ^5.0.8
+        version: 5.0.8(@types/react@19.1.15)(react@19.1.1)
     devDependencies:
       '@adonisjs/assembler':
         specifier: ^7.8.2
@@ -2505,6 +2511,13 @@ packages:
         integrity: sha512-nPdaFdQ0h/GEigbPClz11D0v/ZJEwxmeVZGeMo3Z5StPtUTkA9o1lD6QwoirYiSDzbcwn2XcjwmCp68W1IS4TA==,
       }
     engines: { node: '>=18' }
+
+  clsx@2.1.1:
+    resolution:
+      {
+        integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==,
+      }
+    engines: { node: '>=6' }
 
   code-block-writer@13.0.3:
     resolution:
@@ -5650,6 +5663,27 @@ packages:
         integrity: sha512-sQi6PERyO/mT8w564ojOVeAlYTtVQmC2GaktQAf+IdI75/GKIggosBuvyVXvEV+FATAT6RbLdIjFoiIId4ozoQ==,
       }
 
+  zustand@5.0.8:
+    resolution:
+      {
+        integrity: sha512-gyPKpIaxY9XcO2vSMrLbiER7QMAMGOQZVRdJ6Zi782jkbzZygq5GI9nG8g+sMgitRtndwaBSl7uiqC49o1SSiw==,
+      }
+    engines: { node: '>=12.20.0' }
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+
 snapshots:
   '@adonisjs/ace@13.4.0':
     dependencies:
@@ -7199,6 +7233,8 @@ snapshots:
     dependencies:
       slice-ansi: 5.0.0
       string-width: 7.2.0
+
+  clsx@2.1.1: {}
 
   code-block-writer@13.0.3: {}
 
@@ -8874,3 +8910,8 @@ snapshots:
       '@speed-highlight/core': 1.2.7
       cookie: 1.0.2
       youch-core: 0.3.3
+
+  zustand@5.0.8(@types/react@19.1.15)(react@19.1.1):
+    optionalDependencies:
+      '@types/react': 19.1.15
+      react: 19.1.1

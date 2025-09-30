@@ -12,7 +12,8 @@
 		"lint": "eslint .",
 		"format": "prettier --write .",
 		"typecheck": "tsc --noEmit",
-		"postinstall": "pnpm run format"
+		"postinstall": "pnpm run format",
+		"postuninstall": "pnpm run format"
 	},
 	"imports": {
 		"#controllers/*": "./app/controllers/*.js",
@@ -70,13 +71,15 @@
 		"@inertiajs/react": "^2.2.3",
 		"@rlanz/ally-twitch": "^0.1.2",
 		"@vinejs/vine": "^3.0.1",
+		"clsx": "^2.1.1",
 		"edge.js": "^6.3.0",
 		"knex": "^3.1.0",
 		"luxon": "^3.7.2",
 		"pg": "^8.16.3",
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1",
-		"reflect-metadata": "^0.2.2"
+		"reflect-metadata": "^0.2.2",
+		"zustand": "^5.0.8"
 	},
 	"hotHook": {
 		"boundaries": [
