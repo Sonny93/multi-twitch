@@ -1,4 +1,5 @@
 import { Head, router } from '@inertiajs/react';
+import clsx from 'clsx';
 import { useCallback, useState } from 'react';
 import { StreamList } from '~/components/streams/stream_list';
 import { useShortcut } from '~/hooks/use_shortcut';
@@ -40,12 +41,22 @@ function Home() {
 	return (
 		<>
 			<Head title="Homepage" />
-			<div className="flex justify-between items-center mb-4">
+			<div className="flex justify-center gap-4 w-[250px] mb-4">
 				<button
 					className="btn-secondary select-none rounded-md"
 					onClick={reloadStreams}
 				>
-					Reload streams
+					Reload
+				</button>
+				<button
+					className={clsx('btn-secondary select-none rounded-md', {
+						'opacity-50': selectedStreams.length === 0,
+						'pointer-events-none': selectedStreams.length === 0,
+						'cursor-not-allowed': selectedStreams.length === 0,
+					})}
+					onClick={clearStreams}
+				>
+					Clear
 				</button>
 			</div>
 			<div className="flex gap-4">
